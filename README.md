@@ -2,7 +2,8 @@
 
 CrossWeave is a **100% decentralized** crossword puzzle hub on
 [Arweave](https://arweave.org) network. Everyone can share their own crossword
-puzzles or **play to earn** reward tokens. Try it now:
+puzzles or **play to earn** reward tokens.
+[Play now](https://arweave.net/Cn85OoO5CLLLM41OkJr-7k8CuGmEogPC1y-HxeJW4v8):
 
 [![Play CrossWeave now](Play_CrossWeave.jpg)](https://arweave.net/Cn85OoO5CLLLM41OkJr-7k8CuGmEogPC1y-HxeJW4v8)
 
