@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="https://arweave.net/DviXOTFqczlc5z0hbe-jDuPFIp8B7anfi67rX5P9d50">
+    <link rel="icon" type="image/png" href="https://arweave.net/2cO49FEEEFo7MM9RgfJyL3j8XY8y3k_a0E0TSyl7YE4">
+    <link href="https://arweave.net/12OdNCIIW4Dl-HYbrOTsij-poRpRcPHr162NuNHNwq0" rel="stylesheet">
+
+    <title>CrossWeave: an Arweave Puzzle Hub</title>
+    <meta name="theme-color" content="#7952b3">
+    <style>
+
+        body {
+            background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        .truncateLongTexts {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .puzzle-container {
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-3">
+    <header>
+        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+            <a href="./" class="d-flex align-items-center text-dark text-decoration-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2"
+                     viewBox="0 0 512.001 512.001"
+                     role="img"><title>Bootstrap</title>
+                    <g>
+                        <g>
+                            <path d="M237.714,70.29c0-7.543,0-62.709,0-70.289H54.857C24.609,0.001,0,24.609,0,54.858v182.857c8.319,0,84.971,0,94.903,0
+			c12.46,0,21.328,12.255,17.329,24.124c-0.984,2.921-11.208,16.844-1.413,33.807c11.752,20.352,40.903,20.345,52.649,0
+			c5.486-9.501,5.617-20.908,0.078-30.502c-7.034-12.186,1.792-27.429,15.837-27.429h58.331v-33.718
+			c-0.844,0.078-1.69,0.139-2.534,0.184c-36.257,1.925-70.608-26.622-70.608-67.038C164.571,95.879,200.429,66.865,237.714,70.29z"
+                            />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M457.143,0.001H274.286c0,8.319,0,84.971,0,94.903c0,14.069-15.265,22.86-27.427,15.837
+			c-19.917-11.494-45.716,2.547-45.716,26.403c0,23.884,25.817,37.888,45.716,26.403c12.187-7.034,27.427,1.792,27.427,15.837
+			v58.331h33.718c-1.248-13.605,1.764-27.36,8.859-39.648c25.826-44.727,90.231-44.611,115.99,0
+			c7.033,12.178,10.114,25.969,8.86,39.647c7.543,0,62.709,0,70.289,0V54.858C512,24.609,487.391,0.001,457.143,0.001z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M417.097,274.286c-14.069,0-22.857-15.264-15.837-27.427c5.605-9.71,5.342-21.116-0.078-30.503
+			c-11.62-20.124-40.836-20.458-52.648,0c-5.389,9.333-5.703,20.76-0.079,30.503c7.055,12.222-1.833,27.427-15.838,27.427h-58.331
+			v33.704c13.507-1.24,27.274,1.714,39.647,8.859c44.734,25.829,44.62,90.228,0,115.991c-12.373,7.144-26.142,10.1-39.647,8.859
+			c0,7.545,0,62.729,0,70.3h182.857c30.248,0,54.857-24.609,54.857-54.857V274.286C503.681,274.286,427.029,274.286,417.097,274.286
+			z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M295.645,348.52c-17.232-9.951-30.41,0.552-34.951,1.758c-11.621,3.087-22.979-5.704-22.979-17.674v-58.318h-33.718
+			c1.24,13.506-1.714,27.274-8.859,39.647c-25.805,44.694-90.201,44.668-115.991,0c-7.145-12.373-10.099-26.141-8.859-39.647
+			c-7.543,0-62.708,0-70.288,0v182.857c0,30.248,24.609,54.857,54.857,54.857h182.857c0-8.264,0-85.003,0-94.915
+			c0-14.069,15.265-22.86,27.427-15.837c9.669,5.582,21.075,5.365,30.503-0.079C316.122,389.346,315.782,360.148,295.645,348.52z"/>
+                        </g>
+                    </g>
+
+                </svg>
+                <span class="fs-4">CrossWeave Puzzle</span>
+            </a>
+
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <button class="btn btn-secondary me-2" type="button" data-tooltip="Arweave Login" id="login-btn"
+                        data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <div class="truncateLongTexts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right me-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                        </svg><span
+                            id="loginBtnTxt">Login</span></div>
+                </button>
+
+                <button class="btn btn-secondary me-2" type="button" disabled="" id="login-loading-btn"
+                        style="display: none">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Logging in...
+                </button>
+
+                <div class="toast-container position-absolute p-3 top-0 start-50 translate-middle-x"
+                     style="z-index: 11">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <strong class="me-auto">Login required</strong>
+                            <small></small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Please Login to use this action.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="loginModalLabel">Login with Arweave wallet</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+                                <div>
+                                    <label for="open-wallet-input" class="form-label">Select key file</label>
+                                    <input class="form-control form-control-lg" id="open-wallet-input" type="file"
+                                           accept=".json">
+
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+
+                                <div class="col-12">
+                                    <p class="text-center">don't have a wallet?</p>
+
+                                    <div class="d-grid gap-2">
+                                        <a href="https://www.arweave.org/wallet" target="_blank"
+                                           rel="noopener noreferrer"
+                                           class="btn btn-primary">Get a wallet</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="puzzle-container p-3 pb-md-4 mx-auto text-center">
+            <div class="px-4 py-2 my-5 text-center">
+                <h1 class="display-5 fw-bold">CrossWeave Puzzle</h1>
+                <div class="col-12 mx-auto">
+                    <p class="lead mb-4">Solve puzzles and win prizes, Create your own puzzle and challenge everybody to
+                        solve it.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="show-puzzles-btn"
+                                onclick="showPuzzles()">Show
+                            Puzzles
+                        </button>
+                        <button class="btn btn-primary btn-lg" type="button" disabled="" id="show-puzzles-btn-loading"
+                                style="display: none">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Loading Puzzles...
+                        </button>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-lg px-4 dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                Create Puzzle
+                            </button>
+
+                            <input id="open-puzzle-input" class="hidden" type="file" accept=".json,.txt,.xw,.puz"/>
+
+                            <ul class="dropdown-menu" style="">
+                                <li><a class="dropdown-item" href="#" onclick="createNewPuzzle()">from scratch</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="openPuzzle()">open .xw.json puzzles</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="https://www.xwordinfo.com/JSON/" target="_blank">read
+                                    more about xw format</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center pt-4 pt-md-5 border-top">
+            <div class="col-md-12">
+                <div id="header">
+                    <h1><span id="puzzle-title" class="editable" contenteditable="true"
+                              onkeydown="suppressEnterKey(event)" onfocusout="setTitle()">Untitled</span>
+                        by <span id="puzzle-author" class="editable" contenteditable="true"
+                                 onkeydown="suppressEnterKey(event)" onfocusout="setAuthor()">Anonymous</span></h1>
+                </div>
+
+                <div id="toolbar" class="d-none">
+                    <button id="quick-layout" type="button" data-tooltip="Generate pattern"
+                            onmouseenter="showMenu(event)" onclick="generatePattern()">
+
+
+                        <i class="fa fa-delicious fa-fw" aria-hidden="true"></i>
+                    </button>
+                    <button id="clear-fill" type="button" data-tooltip="Clear white squares"
+                            onclick="if (confirm('Would you like to clear all squares?')) { clearFill();}">
+                        <i class="fa fa-eraser fa-fw" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div id="main" class="col-12 col-md-8"></div>
+
+                <div id="sidebar" class="col-12 col-md-4">
+                    <div class="half-sidebar">
+                        <div id="across-heading" class="direction-heading">
+                            <div class="clue">
+                                <span id="across-clue-number" class="clue-number"></span>
+                                <span id="across-clue-text" class="editable" contenteditable="true"
+                                      onkeydown="suppressEnterKey(event)" onfocusout="setClues()"></span>
+                            </div>
+                            <div id="across-word" class="current-word"></div>
+                        </div>
+                        <ul id="across-matches" class="matches"></ul>
+                    </div>
+                    <div class="half-sidebar">
+                        <div id="down-heading" class="direction-heading">
+                            <div class="clue">
+                                <span id="down-clue-number" class="clue-number"></span>
+                                <span id="down-clue-text" class="editable" contenteditable="true"
+                                      onkeydown="suppressEnterKey(event)" onfocusout="setClues()"></span>
+                            </div>
+                            <div id="down-word" class="current-word"></div>
+                        </div>
+                        <ul id="down-matches" class="matches"></ul>
+                    </div>
+                </div>
+
+                <div id="footer">
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <div class="btn-group">
+                            <button class="btn btn-success btn-sm px-4 dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="spinner-border spinner-border-sm mx-2" role="status" id="publish-loading"
+                                     style="display: none">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <span>Publish Puzzle</span>
+                            </button>
+
+
+                            <ul class="dropdown-menu" style="">
+
+                                <li><a class="dropdown-item" href="#" onclick="create_puzzle_arweave()">Publish on
+                                    Arweave</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" href="#" onclick="writeFile('json')">Export / Save
+                                    Draft</a>
+                                </li>
+                                <a id="download-puzzle-link" class="hidden">Download puzzle</a>
+
+                            </ul>
+                        </div>
+                        <button type="button" class="btn btn-warning btn-sm px-4 gap-3" id="send-puzzle-btn"
+                                onclick="send_puzzle_solution()" style="">Send Solution / Claim Reward
+                        </button>
+                        <button class="btn btn-sm btn-warning" type="button" disabled="" id="send-puzzle-btn-loading"
+                                style="display: none;">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Sending...
+                        </button>
+
+                    </div>
+                </div>
+                <div id="shortcuts" class="hidden">
+                    <h3>Keyboard Shortcuts</h3>
+                    <table>
+                        <!-- <tr> <td>Undo</td> <td><kbd>Ctrl</kbd><kbd>Z</kbd></td> </tr> -->
+                        <tr>
+                            <td>Switch direction</td>
+                            <td><kbd>Enter</kbd></td>
+                        </tr>
+                        <tr>
+                            <td>Toggle black square</td>
+                            <td><kbd>.</kbd></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!--End-->
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+             id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                    <span class="bi me-2" width="30" height="24">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-puzzle-fill" viewBox="0 0 16 16">
+  <path d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H7a.5.5 0 0 1 .5.5v.382c0 .696-.497 1.182-.872 1.469a.459.459 0 0 0-.115.118.113.113 0 0 0-.012.025L6.5 4.5v.003l.003.01c.004.01.014.028.036.053a.86.86 0 0 0 .27.194C7.09 4.9 7.51 5 8 5c.492 0 .912-.1 1.19-.24a.86.86 0 0 0 .271-.194.213.213 0 0 0 .036-.054l.003-.01v-.008a.112.112 0 0 0-.012-.025.459.459 0 0 0-.115-.118c-.375-.287-.872-.773-.872-1.469V2.5A.5.5 0 0 1 9 2h2.395a1.5 1.5 0 0 1 1.493 1.645L12.645 6.5h.237c.195 0 .42-.147.675-.48.21-.274.528-.52.943-.52.568 0 .947.447 1.154.862C15.877 6.807 16 7.387 16 8s-.123 1.193-.346 1.638c-.207.415-.586.862-1.154.862-.415 0-.733-.246-.943-.52-.255-.333-.48-.48-.675-.48h-.237l.243 2.855A1.5 1.5 0 0 1 11.395 14H9a.5.5 0 0 1-.5-.5v-.382c0-.696.497-1.182.872-1.469a.459.459 0 0 0 .115-.118.113.113 0 0 0 .012-.025L9.5 11.5v-.003l-.003-.01a.214.214 0 0 0-.036-.053.859.859 0 0 0-.27-.194C8.91 11.1 8.49 11 8 11c-.491 0-.912.1-1.19.24a.859.859 0 0 0-.271.194.214.214 0 0 0-.036.054l-.003.01v.002l.001.006a.113.113 0 0 0 .012.025c.016.027.05.068.115.118.375.287.872.773.872 1.469v.382a.5.5 0 0 1-.5.5H4.605a1.5 1.5 0 0 1-1.493-1.645L3.356 9.5h-.238c-.195 0-.42.147-.675.48-.21.274-.528.52-.943.52-.568 0-.947-.447-1.154-.862C.123 9.193 0 8.613 0 8s.123-1.193.346-1.638C.553 5.947.932 5.5 1.5 5.5c.415 0 .733.246.943.52.255.333.48.48.675.48h.238l-.244-2.855z"/>
+</svg>
+                </span>
+                    <span class="fs-5 fw-semibold">Puzzles List</span>
+                </h5>
+                <div class="spinner-grow" role="status" id="puzzle-loading" style="display: none">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi me-2 bi-award" viewBox="0 0 16 16">
+                        <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                    </svg>CrossWeave Balance: <span id="cwt_balance">0</span> CWT</h5>
+            </div>
+            <div class="offcanvas-body">
+                <div class="list-group list-group-flush border-bottom scrollarea" id="puzzles-list">
+                    <a href="#" class="list-group-item list-group-item-action py-3 lh-tight puzzle-list-item">
+                        <div class="d-flex w-100 align-items-center justify-content-between">
+                            <strong class="mb-1">prize</strong>
+                            <small class="text-muted">winner</small>
+                        </div>
+                        <div class="col-10 mb-1 small">id
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md">
+                <small class="d-block mb-3 text-muted">Made by <a href="https://twitter.com/NickyHarpor">Nicky Harpor</a></small>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!--Puzzle-->
+<script src="https://arweave.net/pjDsmft2_NnV1f5yVRvFqbN-Rh6AI3vPQQsmJY2bIsU"></script>
+</body>
+</html>

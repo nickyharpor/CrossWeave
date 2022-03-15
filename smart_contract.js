@@ -74,16 +74,19 @@ export async function handle(state, action) {
             throw new ContractError('Prize cannot be negative')
         }
 
-        if (balances[caller] < prize) {
-            throw new ContractError(`Caller balance not high enough to cover the prize`)
-        }
-
         if (solution_hash in puzzles) {
             throw new ContractError('Puzzle already exists')
         } else {
-            balances[caller] -= prize
+            if (prize > 0){
+                if (balances[caller] >= prize){
+                    balances[caller] -= prize
+                } else {
+                    throw new ContractError(`Caller balance not high enough to cover the prize`)
+                }
+            }
             puzzles[solution_hash] = {
                 "file_id": file_id,
+                "timestamp": SmartWeave.block.timestamp,
                 "creator": caller,
                 "prize": prize,
                 "winner": null
@@ -107,7 +110,7 @@ export async function handle(state, action) {
 
         if (solution_hash in puzzles) {
             let solution_buffer = SmartWeave.arweave.utils.stringToBuffer(solution);
-            let this_hash = await SmartWeave.arweave.utils.crypto.hash(solution_buffer);
+            let this_hash = await SmartWeave.arweave.crypto.hash(solution_buffer);
             const calculated_hash = SmartWeave.arweave.utils.bufferTob64Url(this_hash);
             if (calculated_hash === solution_hash){
                 if (puzzles[solution_hash].winner === null) {
