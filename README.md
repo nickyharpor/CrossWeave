@@ -3,7 +3,9 @@
 CrossWeave is a **100% decentralized** crossword puzzle hub on
 [Arweave](https://arweave.org) network. Everyone can share their own crossword
 puzzles or **play to earn** reward tokens.
-[Play now](https://arweave.net/Cn85OoO5CLLLM41OkJr-7k8CuGmEogPC1y-HxeJW4v8):
+[Watch demo](https://youtu.be/MLkidBbi1Po)
+or
+[play now](https://arweave.net/Cn85OoO5CLLLM41OkJr-7k8CuGmEogPC1y-HxeJW4v8):
 
 [![Play CrossWeave now](Play_CrossWeave.jpg)](https://arweave.net/Cn85OoO5CLLLM41OkJr-7k8CuGmEogPC1y-HxeJW4v8)
 
@@ -20,5 +22,10 @@ associated rewards. The first player who solves a puzzle, wins the reward in
 full. Once a puzzle's been solved, others can see the winner (and stop trying).
 
 ### Smart Contract:
-[1O5rWcrRzD0favCHZ05qnhtyjHHiyqw_XDWcG-rhxZI](https://sonar.redstone.tools/?#/app/contract/1O5rWcrRzD0favCHZ05qnhtyjHHiyqw_XDWcG-rhxZI)
+[1O5rWcrRzD0favCHZ05qnhtyjHHiyqw_XDWcG-rhxZI](https://viewblock.io/arweave/address/1O5rWcrRzD0favCHZ05qnhtyjHHiyqw_XDWcG-rhxZI?txsType=all&tab=code)
 
+### Workflow:
+![Workflow](CrossWeave_Workflow.png)
+
+### PST:
+![PST](CrossWeave_PST.png)
